@@ -21,8 +21,10 @@ async function fileWrite(data) {
       encoding: `utf-8`,
       flag: `w`,
     });
-    console.log(`Inside `)
-  } catch (error) {}
+    console.log(`Inside `);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 // console.log(`File written successfully!!!`);
