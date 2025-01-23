@@ -15,16 +15,28 @@ const data = `This is a sample text`;
 // });
 
 // Promise example
-async function fileWrite(data) {
-  try {
-    await fs.writeFile(`test.js`, data, {
-      encoding: `utf-8`,
-      flag: `w`,
-    });
-    console.log(`Inside `);
-  } catch (error) {
-    console.log(error);
-  }
+// async function fileWrite(data) {
+//   try {
+//     await fs.writeFile(`test.js`, data, {
+//       encoding: `utf-8`,
+//       flag: `w`,
+//     });
+//     console.log(`Inside `);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+async function fileRead() {
+  const data = await fs.readFile(`message.txt`);
+  console.log(data);
+  // return data;
 }
+
+fileRead();
+// console.log(rawData);
+// console.dir(rawData, { depth: null });
+
+const fileWrite = () => {};
 
 // console.log(`File written successfully!!!`);
