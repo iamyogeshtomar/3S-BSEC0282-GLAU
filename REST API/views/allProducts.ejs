@@ -10,9 +10,11 @@
     <ul>
       <% for( let i = 0; i < allProducts.length; i++ ) { %>
       <li>
-        <h1><%= allProducts[i].name %></h1>
-        <h2><%= allProducts[i].price %></h2>
-        <h3><%= allProducts[i].stock %></h3>
+        <a href="/products/<%= allProducts[i]._id %>">
+          <h1><%= allProducts[i].name %></h1>
+          <h2><%= allProducts[i].price %></h2>
+          <h3><%= allProducts[i].stock %></h3>
+        </a>
       </li>
       <% } %>
     </ul>
