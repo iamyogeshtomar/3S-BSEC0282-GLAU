@@ -1,5 +1,6 @@
 const express = require(`express`);
 const app = express();
+const ejs = require(`ejs`);
 const mongoose = require(`mongoose`);
 const path = require(`path`);
 const PORT = 3000;
@@ -20,9 +21,11 @@ const PORT = 3000;
 // }
 // connectDB();
 
+app.set(`view engine`, `ejs`);
+
 const Product = require(`./Schemas/productSchema.js`);
 
-// app.use(express.static(path.resolve(__dirname, `public`)));
+app.use(express.static(path.resolve(__dirname, `views`)));
 app.use(express.urlencoded({ extended: true }));
 
 app.get(`/`, (req, res) => {
@@ -54,7 +57,8 @@ app.post(`/formdata`, async (req, res) => {
   const { name, price, stock } = req.body;
   // console.log(req.body)
   const newProduct = await Product.create({ name, price, stock });
-  res.send(newProduct);
+  res.render(`product.ejs`, { name, price, stock });
+  // res.send(newProduct);
 });
 
 app.use((req, res) => {
