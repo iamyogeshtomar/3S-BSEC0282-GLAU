@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobLooto.com</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <button><a href="/new">Add New Job</a></button>
+      <ul>
+        <% allJobs.forEach(job => { %>
+        <li>
+          <a href="/<%= job._id %>">
+            <h1><%= job.title %></h1>
+            <h2><%= job.package %></h2>
+            <h3><%= job.description %></h3>
+          </a>
+        </li>
+        <% }) %>
+      </ul>
+
+      <!-- <button><a href="/new">+ Add new Job</a></button>
+      <ul>
+        <% allJobs.forEach(job => { %>
+        <li>
+          <a href="/<%= job._id %>">
+            <h1><%= job.title %></h1>
+            <p><%= job.description %></p>
+          </a>
+        </li>
+        <% }) %>
+      </ul> -->
+    </main>
+  </body>
+</html>

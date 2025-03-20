@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Your own Job</title>
+  </head>
+  <body>
+    <h1>Post your own job below</h1>
+    <br />
+    <form action="/" method="post">
+      <div>
+        <label for="title">Job Title</label><br />
+        <input type="text" placeholder="Enter Job title" name="title" /><br />
+      </div>
+      <br />
+      <div>
+        <label for="package">Package</label><br />
+        <input
+          type="number"
+          placeholder="Enter offered package"
+          name="package"
+        /><br />
+      </div>
+      <br />
+      <div>
+        <label for="description">Job Description</label><br />
+        <!-- <input
+          type="textarea"
+          placeholder="Enter Job description"
+          name="description"
+        /><br /> -->
+        <textarea name="description"></textarea>
+      </div>
+      <br />
+      <div>
+        <label for="requirements">Job Requirements</label><br />
+        <input
+          type="text"
+          placeholder="Enter Job requirements"
+          name="requirements"
+        /><br />
+      </div>
+      <br />
+      <div>
+        <label for="employmentType">Job Type</label><br />
+        <input
+          type="text"
+          placeholder="Enter your preferecne"
+          name="employmentType"
+        /><br />
+      </div>
+      <br />
+      <div>
+        <label for="category">Job Category</label><br />
+        <input
+          type="text"
+          placeholder="Enter Job category"
+          name="category"
+        /><br />
+      </div>
+      <br />
+      <div>
+        <label for="location">Job Location</label><br />
+        <input
+          type="text"
+          placeholder="Enter Job location"
+          name="location"
+        /><br />
+      </div>
+      <br />
+      <button type="submit">Submit Job</button>
+    </form>
+  </body>
+</html>
