@@ -9,6 +9,16 @@ const {
   addNewJob,
 } = require(`../Controllers/jobController.js`);
 
+router.get(`/`, showAllJobs);
+
+router.get(`/:id`, showSingleJob);
+
+router.get(`/new`, showNewJobForm);
+
+router.post(`/`, addNewJob);
+
+module.exports = router;
+
 // router.get(`/`, async (req, res) => {
 //   const allJobs = await Job.find({});
 //   res.render(`homepage.ejs`, { allJobs });
@@ -46,13 +56,3 @@ const {
 
 //     }
 // })
-
-router.get(`/`, showAllJobs);
-
-router.get(`/:jobId`, showSingleJob);
-
-router.get(`/new`, showNewJobForm);
-
-router.post(`/`, addNewJob);
-
-module.exports = router;

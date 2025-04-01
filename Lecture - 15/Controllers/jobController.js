@@ -1,12 +1,13 @@
 const Job = require(`../Schemas/jobSchema.js`);
 
 const showAllJobs = async (req, res) => {
-  const allJobs = await Job.find({});
+  const allJobs = await Job.find();
   res.render(`homepage.ejs`, { allJobs });
 };
 
 const showSingleJob = async (req, res) => {
-  const singleJob = await Job.find(req.params.id);
+  const { id } = req.params;
+  const singleJob = await Job.findById(id);
   res.render(`showSingleJobPage.ejs`, { singleJob });
 };
 

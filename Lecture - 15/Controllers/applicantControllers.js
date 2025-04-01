@@ -1,8 +1,9 @@
-const bcryptjs = require(`bcryptjs`);
 const Applicant = require(`../Schemas/applicantSchema.js`);
+const bcryptjs = require(`bcryptjs`);
 
 const showUserSignUpForm = (req, res) => {
-  res.render(`signUpForm`);
+  console.log(`working or not`);
+  res.render(`signUpForm.ejs`);
 };
 
 const newUserSignUpFormSubmit = async (req, res) => {
@@ -16,9 +17,14 @@ const newUserSignUpFormSubmit = async (req, res) => {
     gender,
     password: hashedPassword,
   });
+  console.log(`working or not`);
   // res.send(newApplicant);
   res.redirect(`/`);
 };
+
+const showSignInForm = async(req, res)=>{
+  res.render(``)
+}
 
 module.exports = {
   newUserSignUpFormSubmit,

@@ -2,7 +2,7 @@ const bcryptjs = require(`bcryptjs`);
 const Applicant = require(`../Schemas/applicantSchema.js`);
 
 const showUserSignUpForm = (req, res) => {
-  res.render(`signUpForm`);
+  res.render(`signUpForm.ejs`);
 };
 
 const newUserSignUpFormSubmit = async (req, res) => {
